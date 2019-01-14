@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">VrSync</string>
+
+    <!-- Controller screen -->
+    <string name="controller">Controller</string>
+
+    <!-- Controller settings -->
+    <string name="controller_settings">Controller Settings</string>
+    <string name="name">Name</string>
+    <string name="playback_delay">Playback Delay</string>
+    <string name="temperature">Temperature</string>
+    <string name="battery_level">Battery Level</string>
+    <string name="play_pause_device">Play/Pause Device</string>
+    <string name="up_next">Up Next:</string>
+    <string name="video_title">Video Title</string>
+    <string name="channel_name">Channel Name</string>
+    <string name="prev">Prev</string>
+    <string name="reset">Reset</string>
+    <string name="play_on_all">Play on All</string>
+    <string name="next">Next</string>
+    <string name="playlist">Playlist</string>
+    <string name="_00_00">00:00</string>
+    <string name="_05_00">05:00</string>
+    <string name="screen_type">mobile</string>
+    <string name="vr_image">VR Image</string>
+    <string name="_0_videos">0 videos</string>
+    <string name="title_channel">Title &amp; Channel</string>
+    <string name="duration">Duration</string>
+    <string name="play_pause_all_device">Play/Pause \nAll Device</string>
+    <string name="_04_54">04:54</string>
+    <string name="no_device_connected">No device connected</string>
+    <string name="learn_how_to_connect_devices"><![CDATA[Learn how to connect devices >]]></string>
+    <string name="device_connected"> Device Connected</string>
+    <string name="playing">Playing</string>
+    <string name="missing_files">missing files</string>
+    <string name="overheating">overheating</string>
+    <string name="low_battery">low battery</string>
+    <string name="_1">1</string>
+    <string name="go"><![CDATA[>]]></string>
+    <string name="no_next_song">No Next Song</string>
+    <string name="please_allow_storage_permissions">Please Allow Storage Permission</string>
+    <string name="twelve_percent">12%</string>
+
+    <string name="save_playlist">Do you want to save changes?</string>
+    <string name="playlist_saved">Playlist saved</string>
+</resources>
