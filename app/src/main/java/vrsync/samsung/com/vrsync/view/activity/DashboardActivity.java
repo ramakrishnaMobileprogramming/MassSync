@@ -84,6 +84,7 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         initializeView();
+
     }
 
     //Initialize the Views
