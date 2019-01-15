@@ -44,7 +44,7 @@ public class PlayListFragment extends BaseFragment implements View.OnClickListen
     private LinearLayoutManager linearLayoutManager;
     private Context mContext;
     private AppCompatImageView thumbnailCurrentIV;
-    private AppCompatImageView thumbnailNextIV;
+   // private AppCompatImageView thumbnailNextIV;
 
     //Constructor of PlayList Fragment
     public PlayListFragment() {
@@ -99,7 +99,7 @@ public class PlayListFragment extends BaseFragment implements View.OnClickListen
         crossIV = view.findViewById(R.id.cross_iv);
         videoCountTV = view.findViewById(R.id.video_count_tv);
         thumbnailCurrentIV = getActivity().findViewById(R.id.thumbnail_current_iv);
-        thumbnailNextIV = getActivity().findViewById(R.id.thumbnail_next_iv);
+       // thumbnailNextIV = getActivity().findViewById(R.id.thumbnail_next_iv);
         controllerListener = (IControllerListener) mContext;
         linearLayoutManager = new LinearLayoutManager(mContext);
         setListeners(savedInstanceState);
@@ -192,7 +192,7 @@ public class PlayListFragment extends BaseFragment implements View.OnClickListen
         savePlaylistIv.setImageDrawable(ContextCompat.getDrawable(mContext, android.R.drawable.ic_menu_save));
         popUpFragment();
         thumbnailCurrentIV.setImageBitmap(newList.get(0).getImageBitmap());
-        thumbnailNextIV.setImageBitmap(newList.get(1).getImageBitmap());
+       // thumbnailNextIV.setImageBitmap(newList.get(1).getImageBitmap());
     }
 
     private int getCurrentPlayingPosition(List<PlayListInfoModel> newList) {

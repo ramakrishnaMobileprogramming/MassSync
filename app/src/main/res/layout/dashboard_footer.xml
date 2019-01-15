@@ -66,22 +66,14 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:gravity="center_vertical"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <android.support.v7.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="82dp"
                 android:orientation="horizontal"
                 android:weightSum="5.5">
-
-                <android.support.v7.widget.AppCompatImageView
-                    android:id="@+id/previous_song_iv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/prev"
-                    android:src="@drawable/previous_btn" />
 
                 <android.support.v7.widget.AppCompatImageView
                     android:id="@+id/rewind_song_iv"
@@ -91,6 +83,15 @@
                     android:layout_weight="1"
                     android:contentDescription="@string/reset"
                     android:src="@drawable/reset_btn" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/previous_song_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/prev"
+                    android:src="@drawable/previous_btn" />
 
                 <FrameLayout
                     android:layout_width="0dp"
@@ -144,7 +145,7 @@
             <android.support.v7.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:weightSum="5.5">
 
@@ -153,14 +154,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/prev" />
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
                     android:text="@string/reset" />
+
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="0dp"
@@ -189,7 +184,7 @@
 
     </android.support.v7.widget.LinearLayoutCompat>
 
-    <!--<android.support.v7.widget.LinearLayoutCompat
+    <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
@@ -212,15 +207,16 @@
             android:layout_marginTop="5dp"
             android:text="@string/video_title"
             android:textStyle="bold" />
+    </android.support.v7.widget.LinearLayoutCompat>
 
-        <android.support.v7.widget.AppCompatTextView
+       <!-- <android.support.v7.widget.AppCompatTextView
             android:id="@+id/next_song_channel_name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/channel_name" />
-    </android.support.v7.widget.LinearLayoutCompat>-->
+    -->
 
-    <android.support.v7.widget.LinearLayoutCompat
+   <!-- <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_weight="1">
@@ -231,6 +227,6 @@
             android:layout_height="wrap_content"
             android:src="@drawable/video_thumbnail" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.LinearLayoutCompat>-->
 
 </android.support.v7.widget.LinearLayoutCompat>

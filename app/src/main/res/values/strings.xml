@@ -37,7 +37,7 @@
     <string name="low_battery">low battery</string>
     <string name="_1">1</string>
     <string name="go"><![CDATA[>]]></string>
-    <string name="no_next_song">No Next Song</string>
+    <string name="no_next_song">End of Playlist</string>
     <string name="please_allow_storage_permissions">Please Allow Storage Permission</string>
     <string name="twelve_percent">12%</string>
 

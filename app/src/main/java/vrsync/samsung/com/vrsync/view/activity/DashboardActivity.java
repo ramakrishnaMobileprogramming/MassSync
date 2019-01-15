@@ -55,7 +55,7 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
     private AppCompatTextView missingFilesTV;
     private AppCompatTextView overheatingDeviceTV;
     private AppCompatTextView lowBatteryTV;
-    private AppCompatTextView moreArrowTv;
+    //private AppCompatTextView moreArrowTv;
     private AppCompatImageView thumbnailCurrentIV;
     private AppCompatTextView currentDurationTV;
     private AppCompatSeekBar progressSeekBarSB;
@@ -65,9 +65,9 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
     private AppCompatImageView playPauseIV;
     private AppCompatImageView nextSongIV;
     private AppCompatImageView playlistIV;
-    // private AppCompatTextView nextSongTitleTV;
-    // private AppCompatTextView nextSongChannelNameTV;
-    private AppCompatImageView thumbnailNextIV;
+    private AppCompatTextView nextSongTitleTV;
+    //private AppCompatTextView nextSongChannelNameTV;
+    //private AppCompatImageView thumbnailNextIV;
     private Context mContext;
     private PlayListData listInfo;
     private Handler seekBarHandler;
@@ -95,7 +95,7 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
         missingFilesTV = findViewById(R.id.missing_files_tv);
         overheatingDeviceTV = findViewById(R.id.overheating_device_tv);
         lowBatteryTV = findViewById(R.id.low_battery_tv);
-        moreArrowTv = findViewById(R.id.more_arrow_tv);
+        //moreArrowTv = findViewById(R.id.more_arrow_tv);
         thumbnailCurrentIV = findViewById(R.id.thumbnail_current_iv);
         currentDurationTV = findViewById(R.id.current_duration_tv);
         progressSeekBarSB = findViewById(R.id.progress_seekbar_sb);
@@ -105,9 +105,9 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
         playPauseIV = findViewById(R.id.play_pause_iv);
         nextSongIV = findViewById(R.id.next_song_iv);
         playlistIV = findViewById(R.id.playlist_iv);
-        /*nextSongTitleTV = findViewById(R.id.next_song_title_tv);
-        nextSongChannelNameTV = findViewById(R.id.next_song_channel_name_tv);*/
-        thumbnailNextIV = findViewById(R.id.thumbnail_next_iv);
+        nextSongTitleTV = findViewById(R.id.next_song_title_tv);
+       // nextSongChannelNameTV = findViewById(R.id.next_song_channel_name_tv);
+       // thumbnailNextIV = findViewById(R.id.thumbnail_next_iv);
         circularSeekBar = findViewById(R.id.circular_progress_bar);
         mContext = DashboardActivity.this;
         seekBarHandler = new Handler();
@@ -186,7 +186,7 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
     private void setListeners() {
         refreshIV.setOnClickListener(this);
         playlistIV.setOnClickListener(this);
-        moreArrowTv.setOnClickListener(this);
+     //   moreArrowTv.setOnClickListener(this);
         playPauseIV.setOnClickListener(this);
 
         previousSongIV.setOnLongClickListener(this);
@@ -314,8 +314,8 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
                 }
                 break;
 
-            case R.id.more_arrow_tv:
-                break;
+            /*case R.id.more_arrow_tv:
+                break;*/
 
             case R.id.play_pause_iv:
                 if (listInfo != null && !listInfo.getPlayList().isEmpty()) {
@@ -423,14 +423,14 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
     private void setNextTitle() {
         int position = listInfo.getCurrentClickedPosition();
         if (position < listInfo.getPlayList().size() - 1) {
-            // nextSongTitleTV.setText(listInfo.getPlayList().get(position + 1).getVideoTitle());
-            // nextSongChannelNameTV.setText(listInfo.getPlayList().get(position + 1).getVideoChannelName())
-            thumbnailNextIV.setImageBitmap(listInfo.getPlayList().get(position + 1).getVideoThumbNailBitmap());
+             nextSongTitleTV.setText(listInfo.getPlayList().get(position + 1).getVideoTitle());
+            // nextSongChannelNameTV.setText(listInfo.getPlayList().get(position + 1).getVideoChannelName());
+            //thumbnailNextIV.setImageBitmap(listInfo.getPlayList().get(position + 1).getVideoThumbNailBitmap());
         }
         if (position >= listInfo.getPlayList().size() - 1) {
-            //nextSongTitleTV.setText(getString(R.string.no_next_song));
-            //nextSongChannelNameTV.setText(getString(R.string.no_next_song));
-            thumbnailNextIV.setImageResource(R.drawable.video_thumbnail);
+            nextSongTitleTV.setText(getString(R.string.no_next_song));
+           // nextSongChannelNameTV.setText(getString(R.string.no_next_song));
+           // thumbnailNextIV.setImageResource(R.drawable.video_thumbnail);
         }
     }
 
@@ -522,7 +522,9 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
 
     public void onPlaylistLoaded() {
         thumbnailCurrentIV.setImageBitmap(listInfo.getPlayList().get(0).getVideoThumbNailBitmap());
-        thumbnailNextIV.setImageBitmap(listInfo.getPlayList().get(1).getVideoThumbNailBitmap());
+       // thumbnailNextIV.setImageBitmap(listInfo.getPlayList().get(1).getVideoThumbNailBitmap());
+        nextSongTitleTV.setText(listInfo.getPlayList().get(0).getVideoTitle());
+       // nextSongChannelNameTV.setText(listInfo.getPlayList().get(0).getVideoChannelName());
         PlayListData.getInstance().setCurrentClickedPosition(0);
         setAlphaValues();
     }
