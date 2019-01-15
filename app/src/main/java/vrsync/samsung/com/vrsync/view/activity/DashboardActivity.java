@@ -89,7 +89,6 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
     //Initialize the Views
     private void initializeView() {
         initializeDeviceFetcher();
-
         connectedDeviceTV = findViewById(R.id.connected_device_tv);
         playingDeviceTv = findViewById(R.id.playing_device_tv);
         refreshIV = findViewById(R.id.refresh_iv);
